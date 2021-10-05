@@ -59,13 +59,24 @@ function managerQS(answers) {
             type: "input",
             message: "What is the office number of the manager?",
             name: "officeNumber",
+        },
+        {
+            type: "confirm",
+            message: "Would you like to add another team member?",
+            name: "addAnother",
         }
     ])
 
     .then(function (managerAnswers) {
         const newManager = new Manager(answers.name, answers.id, answers.email, managerAnswers.officeNumber)
         createTeam.push(newManager);
-        console.log(createTeam);
+        if (managerAnswers.addAnother === true) {
+            enterEmployee()
+        }
+        else {
+            console.log(createTeam)
+            writeToFile()
+        }
     })
 }
 
@@ -75,13 +86,24 @@ function engineerQS(answers) {
             type: "input",
             message: "What is the Gihub of the engineer?",
             name: "github"
+        },
+        {
+            type: "confirm",
+            message: "Would you like to add another team member?",
+            name: "addAnother",
         }
     ])
 
     .then(function (engineerAnswers) {
         const newEngineer = new Engineer(answers.name, answers.id, answers.email, engineerAnswers.github)
         createTeam.push(newEngineer);
-        console.log(createTeam);
+        if (engineerAnswers.addAnother === true) {
+            enterEmployee()
+        }
+        else {
+            console.log(createTeam)
+            writeToFile()
+        }
     })
 }
 
@@ -91,14 +113,32 @@ function internQS(answers) {
             type: "input",
             message: "What school does the intern attend?",
             name: "school",
+        },
+        {
+            type: "confirm",
+            message: "Would you like to add another team member?",
+            name: "addAnother",
         }
     ])
 
     .then(function (internAnswers) {
         const newIntern = new Intern(answers.name, answers.id, answers.email, internAnswers.school)
         createTeam.push(newIntern);
-        console.log(createTeam);
+        if (internAnswers.addAnother === true) {
+            enterEmployee()
+        }
+        else {
+            console.log(createTeam)
+            writeToFile()
+        }
     })
+}
+
+function writeToFile() {
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    fs.writeFileSync(outputPath, render(teamArr), "utf-8")
 }
 
 enterEmployee()
