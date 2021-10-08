@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path")
+const render = require("./classes/renderHTML")
 const Employee = require("./classes/employee")
 const Manager = require("./classes/Manager")
 const Engineer = require("./classes/Engineer")
@@ -138,7 +139,7 @@ function writeToFile() {
     if (!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
     }
-    fs.writeFileSync(outputPath, render(teamArr), "utf-8")
+    fs.writeFileSync(outputPath, render(createTeam), "utf-8")
 }
 
 enterEmployee()
