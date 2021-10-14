@@ -4,22 +4,17 @@
 
   ## Table of Contents
 1. [Description](#Description)
-2. [Installation](#Installation)
-3. [Usage](#Usage)
-4. [Contributing Guidelines](#Contributing-Guidelines)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Questions](#Questions)
 5. [Test Instructions](#Test-Instructions)
-6. [License](#License)
-7. [Questions](#Questions)
 ## Description
 - The purpose of this project is to allow a team to generate a profile page that includes each of the contributors names, titles, and unique descriptors depending on their role. The profile is made via prompts that are entered in from the command line using node. Once all prompts are entered a team profile page will be generated with the information.
-## Installation
-- N/A
 ## Usage
-- Clone project from GitHub
-## Contributing Guidelines
-- N/A
-## Test Instructions
-- N/A
+- Clone project from Github onto Terminal/Bash
+- Enter the node index.js
+- Enter in all of the prompts
+- Profile will be generated
 ## License
 - MIT License
 - https://choosealicense.com/licenses/mit/
@@ -27,3 +22,5 @@
 ## Questions
 - GitHub Profile: <a href="https://github.com/nlaramee120">GitHub</a><br>
 - My Email: nlaramee120@aol.com<br>
+## Test Instructions
+- N/A
