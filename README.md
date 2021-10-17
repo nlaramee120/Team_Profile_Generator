@@ -23,4 +23,4 @@
 - GitHub Profile: <a href="https://github.com/nlaramee120">GitHub</a><br>
 - My Email: nlaramee120@aol.com<br>
 ## Test Instructions
-- N/A
+- Video Walkthrough - https://watch.screencastify.com/v/JBKuRCt0X7Ru4QY7u9O8
